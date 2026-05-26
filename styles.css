@@ -1,0 +1,599 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#edf0f3;
+  color:#0f172a;
+}
+
+/* TOPBAR */
+
+.topbar{
+  height:60px;
+
+  background:#08244a;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 30px;
+
+  border-bottom:3px solid #004b8d;
+}
+
+.topbar-left{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo{
+  width:40px;
+  height:40px;
+
+  border-radius:6px;
+
+  background:#0c5aa6;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:white;
+  font-weight:800;
+  font-size:15px;
+}
+
+.brand h1{
+  font-size:16px;
+  color:white;
+  font-weight:800;
+}
+
+.brand span{
+  font-size:12px;
+  color:#cbd5e1;
+}
+
+.topbar-right input{
+  width:290px;
+  height:36px;
+
+  border:none;
+  outline:none;
+
+  border-radius:5px;
+
+  padding:0 14px;
+
+  font-size:13px;
+}
+
+/* SUBNAV */
+
+.subnav{
+  height:42px;
+
+  background:#00346b;
+
+  display:flex;
+  align-items:center;
+
+  padding:0 24px;
+
+  gap:18px;
+
+  border-bottom:1px solid #0c4f95;
+}
+
+.subnav a{
+  text-decoration:none;
+  color:#dbeafe;
+
+  font-size:13px;
+  font-weight:600;
+
+  padding:5px 0;
+
+  transition:.2s;
+}
+
+.subnav a:hover{
+  color:white;
+}
+
+.subnav a.active{
+  color:white;
+}
+
+/* MAIN */
+
+.main-container{
+  width:100%;
+  max-width:1380px;
+
+  margin:auto;
+
+  padding:18px;
+}
+
+/* HERO */
+
+.hero{
+  display:grid;
+  grid-template-columns:360px 1fr;
+  gap:16px;
+
+  margin-bottom:18px;
+}
+
+.hero-left{
+  background:white;
+
+  border:1px solid #d8dee6;
+  border-radius:5px;
+
+  padding:18px;
+}
+
+.section-label{
+  font-size:11px;
+  font-weight:800;
+
+  color:#004b8d;
+
+  letter-spacing:.08em;
+}
+
+.hero-left h2{
+  font-size:34px;
+  margin-top:8px;
+}
+
+.hero-location{
+  color:#64748b;
+  margin-top:6px;
+
+  font-size:14px;
+}
+
+.hero-cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+
+  margin-top:20px;
+}
+
+.hero-card{
+  background:#f8fafc;
+
+  border:1px solid #e2e8f0;
+  border-radius:4px;
+
+  padding:14px;
+}
+
+.hero-card span{
+  display:block;
+
+  color:#64748b;
+  font-size:12px;
+}
+
+.hero-card strong{
+  display:block;
+
+  margin-top:8px;
+
+  font-size:28px;
+  font-weight:800;
+}
+
+.hero-right{
+  min-height:260px;
+}
+
+.hero-banner{
+  position:relative;
+
+  height:100%;
+
+  border-radius:5px;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url('https://cdn.pixabay.com/photo/2020/11/25/20/57/little-boys-5777155_960_720.jpg');
+
+  background-size:cover;
+  background-position:center;
+
+  border:1px solid #d8dee6;
+}
+
+.hero-content{
+  position:absolute;
+
+  bottom:28px;
+  left:28px;
+
+  color:white;
+}
+
+.hero-tag{
+  background:#0c5aa6;
+
+  padding:6px 10px;
+
+  border-radius:4px;
+
+  font-size:11px;
+  font-weight:700;
+}
+
+.hero-content h3{
+  margin-top:14px;
+
+  font-size:32px;
+  max-width:620px;
+  line-height:1.1;
+}
+
+.hero-content p{
+  margin-top:12px;
+  color:#dbeafe;
+}
+
+/* SECTION */
+
+.section{
+  margin-bottom:18px;
+}
+
+.section-top{
+  margin-bottom:10px;
+}
+
+.section-top h2{
+  font-size:22px;
+  margin-top:6px;
+}
+
+/* GROUPS */
+
+.groups-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.group-table-card{
+  background:white;
+  border:1px solid #d8dee6;
+  border-radius:5px;
+  overflow:hidden;
+}
+
+.group-table-header{
+  background:#f8fafc;
+
+  padding:10px 12px;
+
+  font-size:13px;
+  font-weight:700;
+
+  border-bottom:1px solid #e2e8f0;
+}
+
+.group-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.group-table th{
+  background:#fafafa;
+
+  font-size:11px;
+  font-weight:700;
+
+  color:#64748b;
+
+  padding:8px 6px;
+
+  border-bottom:1px solid #e5e7eb;
+
+  text-align:center;
+}
+
+.group-table td{
+  padding:9px 6px;
+
+  font-size:13px;
+
+  border-bottom:1px solid #f1f5f9;
+
+  text-align:center;
+}
+
+.group-table tbody tr:hover{
+  background:#f8fafc;
+}
+
+.team-cell{
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  text-align:left;
+}
+
+.team-cell img{
+  width:18px;
+}
+
+.pts{
+  font-weight:700;
+  color:#004b8d;
+}
+
+/* STATS */
+
+.stats-row{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+
+  gap:14px;
+
+  margin-bottom:18px;
+}
+
+.stat-box{
+  background:white;
+
+  border:1px solid #d8dee6;
+  border-radius:5px;
+
+  padding:16px;
+}
+
+.stat-box span{
+  display:block;
+
+  font-size:12px;
+  color:#64748b;
+}
+
+.stat-box strong{
+  display:block;
+
+  margin-top:10px;
+
+  font-size:18px;
+}
+
+.stat-box small{
+  display:block;
+
+  margin-top:6px;
+
+  color:#64748b;
+}
+
+/* TABLE */
+
+.table-card{
+  background:white;
+
+  border:1px solid #d8dee6;
+  border-radius:5px;
+
+  overflow:hidden;
+}
+
+.main-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.main-table thead{
+  background:#f8fafc;
+}
+
+.main-table th{
+  padding:12px;
+
+  font-size:12px;
+  color:#64748b;
+
+  text-align:left;
+
+  border-bottom:1px solid #e5e7eb;
+}
+
+.main-table td{
+  padding:14px 12px;
+
+  border-bottom:1px solid #f1f5f9;
+}
+
+.main-table tr:hover{
+  background:#fafafa;
+}
+
+.country-cell{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.country-cell img{
+  width:20px;
+}
+
+.winner-cell{
+  color:#004b8d;
+  font-weight:700;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .groups-grid{
+    grid-template-columns:1fr;
+  }
+
+  .stats-row{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .topbar{
+    flex-direction:column;
+
+    height:auto;
+
+    padding:14px;
+
+    gap:12px;
+  }
+
+  .topbar-right{
+    width:100%;
+  }
+
+  .topbar-right input{
+    width:100%;
+  }
+
+  .subnav{
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+
+  .stats-row{
+    grid-template-columns:1fr;
+  }
+
+  .hero-left h2{
+    font-size:26px;
+  }
+
+  .hero-content h3{
+    font-size:24px;
+  }
+
+}
+
+/* HISTORY TABLE */
+
+.section-description{
+  margin-top:6px;
+
+  color:#64748b;
+  font-size:13px;
+}
+
+.history-table-card{
+  overflow-x:auto;
+}
+
+.history-table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:900px;
+}
+
+.history-table thead{
+  background:#f8fafc;
+}
+
+.history-table th{
+  padding:12px;
+
+  text-align:left;
+
+  font-size:12px;
+  font-weight:700;
+
+  color:#64748b;
+
+  border-bottom:1px solid #e2e8f0;
+}
+
+.history-table td{
+  padding:13px 12px;
+
+  border-bottom:1px solid #f1f5f9;
+
+  font-size:13px;
+}
+
+.history-table tbody tr:hover{
+  background:#f8fafc;
+}
+
+.history-table img{
+  width:20px;
+}
+
+.td-year{
+  font-weight:700;
+  color:#0f172a;
+
+  width:80px;
+}
+
+.score-cell{
+  font-weight:700;
+  color:#0f172a;
+}
+
+.score-cell sup{
+  color:#64748b;
+  font-size:10px;
+}
+
+.history-break td{
+  background:#f8fafc;
+
+  color:#64748b;
+
+  text-align:center;
+
+  font-size:12px;
+  font-weight:600;
+
+  padding:12px;
+}
+
+.next-worldcup{
+  background:#f0f7ff;
+}
+
+.next-year{
+  color:#004b8d;
+}
+
+.tbd-cell{
+  color:#64748b;
+  font-weight:600;
+}
+
+.multi-host{
+  gap:5px;
+}
