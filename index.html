@@ -1,15 +1,15 @@
+<!-- ========================= -->
+<!-- index.html -->
+<!-- ========================= -->
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Todo Mundiales</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,25 +19,29 @@
   <!-- TOPBAR -->
   <header class="topbar">
 
-    <div class="topbar-left">
+    <div class="topbar-content">
 
-      <div class="logo">
-        TM
+      <div class="topbar-left">
+
+        <div class="logo">
+          TM
+        </div>
+
+        <div class="brand">
+          <h1>TODO MUNDIALES</h1>
+          <span>Portal de estadísticas FIFA</span>
+        </div>
+
       </div>
 
-      <div class="brand">
-        <h1>TODO MUNDIALES</h1>
-        <span>Portal de estadísticas FIFA</span>
+      <div class="topbar-right">
+
+        <input
+          type="text"
+          placeholder="Buscar selección, mundial, jugador..."
+        >
+
       </div>
-
-    </div>
-
-    <div class="topbar-right">
-
-      <input
-        type="text"
-        placeholder="Buscar selección, mundial, jugador..."
-      >
 
     </div>
 
@@ -46,12 +50,16 @@
   <!-- NAVBAR -->
   <nav class="subnav">
 
-    <a href="#" class="active">Inicio</a>
-    <a href="#">Mundiales</a>
-    <a href="#">Selecciones</a>
-    <a href="#">Jugadores</a>
-    <a href="#">Estadísticas</a>
-    <a href="#">Comparación</a>
+    <div class="subnav-inner">
+
+      <a href="#" class="active">Inicio</a>
+      <a href="#">Mundiales</a>
+      <a href="#">Selecciones</a>
+      <a href="#">Jugadores</a>
+      <a href="#">Estadísticas</a>
+      <a href="#">Comparación</a>
+
+    </div>
 
   </nav>
 
@@ -103,8 +111,6 @@
 
         <div class="hero-banner">
 
-          <div class="hero-overlay"></div>
-
           <div class="hero-content">
 
             <span class="hero-tag">
@@ -127,7 +133,7 @@
 
     </section>
 
-    <!-- GROUPS -->
+<!-- GROUPS -->
     <section class="section">
 
       <div class="section-top">
@@ -1460,7 +1466,36 @@
 
     </section>
 
-    <!-- HISTORIAL -->
+    <!-- STATS -->
+    <section class="stats-row">
+
+      <div class="stat-box">
+        <span>Máximo campeón</span>
+        <strong>Brasil</strong>
+        <small>5 títulos</small>
+      </div>
+
+      <div class="stat-box">
+        <span>Más goles</span>
+        <strong>Miroslav Klose</strong>
+        <small>16 goles</small>
+      </div>
+
+      <div class="stat-box">
+        <span>Más finales</span>
+        <strong>Alemania</strong>
+        <small>8 finales</small>
+      </div>
+
+      <div class="stat-box">
+        <span>Último campeón</span>
+        <strong>Argentina</strong>
+        <small>Catar 2022</small>
+      </div>
+
+    </section>
+
+<!-- HISTORIAL -->
 <section class="section" id="historial">
 
   <div class="section-top">
@@ -2136,4 +2171,5 @@
   </main>
 
 </body>
-</html> 
+
+</html>
