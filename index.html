@@ -1,16 +1,10 @@
-<!-- ========================= -->
-<!-- index.html -->
-<!-- ========================= -->
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Todo Mundiales</title>
-
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -18,49 +12,37 @@
 
   <!-- TOPBAR -->
   <header class="topbar">
-
     <div class="topbar-content">
-
       <div class="topbar-left">
-
         <div class="logo">
-          <img src="source/logo.png" alt="Todo Mundiales">
+          <img src="source/logo.png" alt="Todo Mundiales" onerror="this.src='https://via.placeholder.com/56'">
         </div>
-
         <div class="brand">
           <h1>TODO MUNDIALES</h1>
           <span>Portal de estadísticas FIFA</span>
         </div>
-
       </div>
 
       <div class="topbar-right">
-
-        <input
-          type="text"
-          placeholder="Buscar selección, mundial, jugador..."
-        >
-
+        <!-- Saludo dinámico -->
+        <span id="greetingMessage" class="greeting-msg"></span>
+        <!-- Botón Tema -->
+        <button id="themeToggle" class="theme-toggle">🌙 Oscuro</button>
+        <input type="text" placeholder="Buscar selección, mundial, jugador...">
       </div>
-
     </div>
-
   </header>
 
   <!-- NAVBAR -->
   <nav class="subnav">
-
     <div class="subnav-inner">
-
       <a href="#" class="active">Inicio</a>
       <a href="#">Mundiales</a>
       <a href="#">Selecciones</a>
       <a href="#">Jugadores</a>
       <a href="#">Estadísticas</a>
       <a href="#">Comparación</a>
-
     </div>
-
   </nav>
 
   <!-- MAIN -->
@@ -68,2081 +50,682 @@
 
     <!-- HERO -->
     <section class="hero">
-
       <div class="hero-left">
-
-        <span class="section-label">
-          PRÓXIMO TORNEO
-        </span>
-
+        <span class="section-label">PRÓXIMO TORNEO</span>
         <h2>MUNDIAL 2026</h2>
-
-        <p class="hero-location">
-          Estados Unidos · Canadá · México
-        </p>
-
+        <p class="hero-location">Estados Unidos · Canadá · México</p>
         <div class="hero-cards">
-
           <div class="hero-card">
             <span>Equipos</span>
             <strong>48</strong>
           </div>
-
           <div class="hero-card">
             <span>Partidos</span>
             <strong>104</strong>
           </div>
-
           <div class="hero-card">
             <span>Estadios</span>
             <strong>16</strong>
           </div>
-
           <div class="hero-card">
             <span>Grupos</span>
             <strong>12</strong>
           </div>
-
         </div>
-
       </div>
 
       <div class="hero-right">
-
         <div class="hero-banner">
-
           <div class="hero-content">
-
-            <span class="hero-tag">
-              FIFA WORLD CUP
-            </span>
-
-            <h3>
-              El torneo más grande del planeta vuelve en 2026
-            </h3>
-
-            <p>
-              48 selecciones · 3 países anfitriones · 104 partidos
-            </p>
-
+            <span class="hero-tag">FIFA WORLD CUP</span>
+            <h3>El torneo más grande del planeta vuelve en 2026</h3>
+            <p>48 selecciones · 3 países anfitriones · 104 partidos</p>
           </div>
-
         </div>
-
       </div>
-
     </section>
 
-<!-- GROUPS -->
+    <!-- GROUPS -->
     <section class="section">
-
       <div class="section-top">
-
         <div>
-          <span class="section-label">
-            FASE DE GRUPOS
-          </span>
-
+          <span class="section-label">FASE DE GRUPOS</span>
           <h2>GRUPOS DEL MUNDIAL</h2>
         </div>
-
       </div>
 
       <div class="groups-grid">
 
         <!-- GROUP A -->
         <div class="group-table-card">
-
-          <div class="group-table-header">
-            Group A
-          </div>
-
+          <div class="group-table-header">Group A</div>
           <table class="group-table">
-
             <thead>
-
               <tr>
-                <th>#</th>
-                <th>Equipo</th>
-                <th>P</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>Pts</th>
+                <th>#</th><th>Equipo</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
               </tr>
-
             </thead>
-
             <tbody>
-
               <tr>
-                <td>1</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/mx.png">
-                  México
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>1</td><td class="team-cell"><img src="https://flagcdn.com/w20/mx.png">México</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>2</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/za.png">
-                  Sudáfrica
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>2</td><td class="team-cell"><img src="https://flagcdn.com/w20/za.png">Sudáfrica</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>3</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/kr.png">
-                  Corea del Sur
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>3</td><td class="team-cell"><img src="https://flagcdn.com/w20/kr.png">Corea del Sur</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>4</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/cz.png">
-                  República Checa
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>4</td><td class="team-cell"><img src="https://flagcdn.com/w20/cz.png">República Checa</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
             </tbody>
-
           </table>
-
         </div>
 
         <!-- GROUP B -->
         <div class="group-table-card">
-
-          <div class="group-table-header">
-            Group B
-          </div>
-
+          <div class="group-table-header">Group B</div>
           <table class="group-table">
-
             <thead>
-
               <tr>
-                <th>#</th>
-                <th>Equipo</th>
-                <th>P</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>Pts</th>
+                <th>#</th><th>Equipo</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
               </tr>
-
             </thead>
-
             <tbody>
-
               <tr>
-                <td>1</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/ca.png">
-                  Canadá
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>1</td><td class="team-cell"><img src="https://flagcdn.com/w20/ca.png">Canadá</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>2</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/ba.png">
-                  Bosnia
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>2</td><td class="team-cell"><img src="https://flagcdn.com/w20/ba.png">Bosnia</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>3</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/qa.png">
-                  Catar
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>3</td><td class="team-cell"><img src="https://flagcdn.com/w20/qa.png">Catar</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>4</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/ch.png">
-                  Suiza
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>4</td><td class="team-cell"><img src="https://flagcdn.com/w20/ch.png">Suiza</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
             </tbody>
-
           </table>
-
         </div>
 
-         <!-- GROUP C -->
+        <!-- GROUP C -->
         <div class="group-table-card">
-
-          <div class="group-table-header">
-            Group C
-          </div>
-
+          <div class="group-table-header">Group C</div>
           <table class="group-table">
-
             <thead>
-
               <tr>
-                <th>#</th>
-                <th>Equipo</th>
-                <th>P</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>Pts</th>
+                <th>#</th><th>Equipo</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
               </tr>
-
             </thead>
-
             <tbody>
-
               <tr>
-                <td>1</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/br.png">
-                  Brasil
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>1</td><td class="team-cell"><img src="https://flagcdn.com/w20/br.png">Brasil</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>2</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/ma.png">
-                  Marruecos
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>2</td><td class="team-cell"><img src="https://flagcdn.com/w20/ma.png">Marruecos</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>3</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/ht.png">
-                  Haití
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>3</td><td class="team-cell"><img src="https://flagcdn.com/w20/ht.png">Haití</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>4</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/gb-sct.png">
-                  Escocia
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>4</td><td class="team-cell"><img src="https://flagcdn.com/w20/gb-sct.png">Escocia</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
             </tbody>
-
           </table>
-
         </div>
 
-         <!-- GROUP D -->
+        <!-- GROUP D -->
         <div class="group-table-card">
-
-          <div class="group-table-header">
-            Group D
-          </div>
-
+          <div class="group-table-header">Group D</div>
           <table class="group-table">
-
             <thead>
-
               <tr>
-                <th>#</th>
-                <th>Equipo</th>
-                <th>P</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>Pts</th>
+                <th>#</th><th>Equipo</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
               </tr>
-
             </thead>
-
             <tbody>
-
               <tr>
-                <td>1</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/us.png">
-                  EE.UU.
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>1</td><td class="team-cell"><img src="https://flagcdn.com/w20/us.png">EE.UU.</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>2</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/py.png">
-                  Paraguay
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>2</td><td class="team-cell"><img src="https://flagcdn.com/w20/py.png">Paraguay</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>3</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/au.png">
-                  Australia
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>3</td><td class="team-cell"><img src="https://flagcdn.com/w20/au.png">Australia</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>4</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/tr.png">
-                  Turquía
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>4</td><td class="team-cell"><img src="https://flagcdn.com/w20/tr.png">Turquía</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
             </tbody>
-
           </table>
-
         </div>
 
-         <!-- GROUP E -->
+        <!-- GROUP E -->
         <div class="group-table-card">
-
-          <div class="group-table-header">
-            Group E
-          </div>
-
+          <div class="group-table-header">Group E</div>
           <table class="group-table">
-
             <thead>
-
               <tr>
-                <th>#</th>
-                <th>Equipo</th>
-                <th>P</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>Pts</th>
+                <th>#</th><th>Equipo</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
               </tr>
-
             </thead>
-
             <tbody>
-
               <tr>
-                <td>1</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/de.png">
-                  Alemania
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>1</td><td class="team-cell"><img src="https://flagcdn.com/w20/de.png">Alemania</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>2</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/cw.png">
-                  Curaçao
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>2</td><td class="team-cell"><img src="https://flagcdn.com/w20/cw.png">Curaçao</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>3</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/ci.png">
-                  Costa de Marfil
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>3</td><td class="team-cell"><img src="https://flagcdn.com/w20/ci.png">Costa de Marfil</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>4</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/ec.png">
-                  Ecuador
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>4</td><td class="team-cell"><img src="https://flagcdn.com/w20/ec.png">Ecuador</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
             </tbody>
-
           </table>
-
         </div>
 
-         <!-- GROUP F -->
+        <!-- GROUP F -->
         <div class="group-table-card">
-
-          <div class="group-table-header">
-            Group F
-          </div>
-
+          <div class="group-table-header">Group F</div>
           <table class="group-table">
-
             <thead>
-
               <tr>
-                <th>#</th>
-                <th>Equipo</th>
-                <th>P</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>Pts</th>
+                <th>#</th><th>Equipo</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
               </tr>
-
             </thead>
-
             <tbody>
-
               <tr>
-                <td>1</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/nl.png">
-                  Países Bajos
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>1</td><td class="team-cell"><img src="https://flagcdn.com/w20/nl.png">Países Bajos</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>2</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/jp.png">
-                  Japón
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>2</td><td class="team-cell"><img src="https://flagcdn.com/w20/jp.png">Japón</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>3</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/se.png">
-                  Suecia
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>3</td><td class="team-cell"><img src="https://flagcdn.com/w20/se.png">Suecia</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>4</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/tn.png">
-                  Túnez
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>4</td><td class="team-cell"><img src="https://flagcdn.com/w20/tn.png">Túnez</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
             </tbody>
-
           </table>
-
         </div>
 
-         <!-- GROUP G -->
+        <!-- GROUP G -->
         <div class="group-table-card">
-
-          <div class="group-table-header">
-            Group G
-          </div>
-
+          <div class="group-table-header">Group G</div>
           <table class="group-table">
-
             <thead>
-
               <tr>
-                <th>#</th>
-                <th>Equipo</th>
-                <th>P</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>Pts</th>
+                <th>#</th><th>Equipo</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
               </tr>
-
             </thead>
-
             <tbody>
-
               <tr>
-                <td>1</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/be.png">
-                  Bélgica
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>1</td><td class="team-cell"><img src="https://flagcdn.com/w20/be.png">Bélgica</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>2</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/eg.png">
-                  Egipto
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>2</td><td class="team-cell"><img src="https://flagcdn.com/w20/eg.png">Egipto</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>3</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/ir.png">
-                  Irán
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>3</td><td class="team-cell"><img src="https://flagcdn.com/w20/ir.png">Irán</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>4</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/nz.png">
-                  Nueva Zelanda
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>4</td><td class="team-cell"><img src="https://flagcdn.com/w20/nz.png">Nueva Zelanda</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
             </tbody>
-
           </table>
-
         </div>
 
-         <!-- GROUP H -->
+        <!-- GROUP H -->
         <div class="group-table-card">
-
-          <div class="group-table-header">
-            Group H
-          </div>
-
+          <div class="group-table-header">Group H</div>
           <table class="group-table">
-
             <thead>
-
               <tr>
-                <th>#</th>
-                <th>Equipo</th>
-                <th>P</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>Pts</th>
+                <th>#</th><th>Equipo</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
               </tr>
-
             </thead>
-
             <tbody>
-
               <tr>
-                <td>1</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/es.png">
-                  España
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>1</td><td class="team-cell"><img src="https://flagcdn.com/w20/es.png">España</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>2</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/cv.png">
-                  Cabo Verde
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>2</td><td class="team-cell"><img src="https://flagcdn.com/w20/cv.png">Cabo Verde</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>3</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/sa.png">
-                  Arabia Saudita
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>3</td><td class="team-cell"><img src="https://flagcdn.com/w20/sa.png">Arabia Saudita</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>4</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/uy.png">
-                  Uruguay
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>4</td><td class="team-cell"><img src="https://flagcdn.com/w20/uy.png">Uruguay</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
             </tbody>
-
           </table>
-
         </div>
 
-         <!-- GROUP I -->
+        <!-- GROUP I -->
         <div class="group-table-card">
-
-          <div class="group-table-header">
-            Group I
-          </div>
-
+          <div class="group-table-header">Group I</div>
           <table class="group-table">
-
             <thead>
-
               <tr>
-                <th>#</th>
-                <th>Equipo</th>
-                <th>P</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>Pts</th>
+                <th>#</th><th>Equipo</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
               </tr>
-
             </thead>
-
             <tbody>
-
               <tr>
-                <td>1</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/fr.png">
-                  Francia
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>1</td><td class="team-cell"><img src="https://flagcdn.com/w20/fr.png">Francia</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>2</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/sn.png">
-                  Senegal
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>2</td><td class="team-cell"><img src="https://flagcdn.com/w20/sn.png">Senegal</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>3</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/ir.png">
-                  Irak
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>3</td><td class="team-cell"><img src="https://flagcdn.com/w20/ir.png">Irak</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>4</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/no.png">
-                  Noruega
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>4</td><td class="team-cell"><img src="https://flagcdn.com/w20/no.png">Noruega</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
             </tbody>
-
           </table>
-
         </div>
 
-         <!-- GROUP J -->
+        <!-- GROUP J -->
         <div class="group-table-card">
-
-          <div class="group-table-header">
-            Group J
-          </div>
-
+          <div class="group-table-header">Group J</div>
           <table class="group-table">
-
             <thead>
-
               <tr>
-                <th>#</th>
-                <th>Equipo</th>
-                <th>P</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>Pts</th>
+                <th>#</th><th>Equipo</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
               </tr>
-
             </thead>
-
             <tbody>
-
               <tr>
-                <td>1</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/ar.png">
-                  Argentina
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>1</td><td class="team-cell"><img src="https://flagcdn.com/w20/ar.png">Argentina</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>2</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/dz.png">
-                  Algeria
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>2</td><td class="team-cell"><img src="https://flagcdn.com/w20/dz.png">Algeria</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>3</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/at.png">
-                  Austria
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>3</td><td class="team-cell"><img src="https://flagcdn.com/w20/at.png">Austria</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>4</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/jo.png">
-                  Jordania
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>4</td><td class="team-cell"><img src="https://flagcdn.com/w20/jo.png">Jordania</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
             </tbody>
-
           </table>
-
         </div>
 
-         <!-- GROUP K -->
+        <!-- GROUP K -->
         <div class="group-table-card">
-
-          <div class="group-table-header">
-            Group K
-          </div>
-
+          <div class="group-table-header">Group K</div>
           <table class="group-table">
-
             <thead>
-
               <tr>
-                <th>#</th>
-                <th>Equipo</th>
-                <th>P</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>Pts</th>
+                <th>#</th><th>Equipo</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
               </tr>
-
             </thead>
-
             <tbody>
-
               <tr>
-                <td>1</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/pt.png">
-                  Portugal
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>1</td><td class="team-cell"><img src="https://flagcdn.com/w20/pt.png">Portugal</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>2</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/cd.png">
-                  Congo
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>2</td><td class="team-cell"><img src="https://flagcdn.com/w20/cd.png">Congo</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>3</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/uz.png">
-                  Uzbekistán
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>3</td><td class="team-cell"><img src="https://flagcdn.com/w20/uz.png">Uzbekistán</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>4</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/co.png">
-                  Colombia
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>4</td><td class="team-cell"><img src="https://flagcdn.com/w20/co.png">Colombia</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
             </tbody>
-
           </table>
-
         </div>
 
-         <!-- GROUP L -->
+        <!-- GROUP L -->
         <div class="group-table-card">
-
-          <div class="group-table-header">
-            Group L
-          </div>
-
+          <div class="group-table-header">Group L</div>
           <table class="group-table">
-
             <thead>
-
               <tr>
-                <th>#</th>
-                <th>Equipo</th>
-                <th>P</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>Pts</th>
+                <th>#</th><th>Equipo</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
               </tr>
-
             </thead>
-
             <tbody>
-
               <tr>
-                <td>1</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/gb-eng.png">
-                  Inglaterra
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>1</td><td class="team-cell"><img src="https://flagcdn.com/w20/gb-eng.png">Inglaterra</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>2</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/hr.png">
-                  Croacia
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>2</td><td class="team-cell"><img src="https://flagcdn.com/w20/hr.png">Croacia</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>3</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/gh.png">
-                  Ghana
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>3</td><td class="team-cell"><img src="https://flagcdn.com/w20/gh.png">Ghana</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
               <tr>
-                <td>4</td>
-
-                <td class="team-cell">
-                  <img src="https://flagcdn.com/w20/pa.png">
-                  Panamá
-                </td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="pts">0</td>
+                <td>4</td><td class="team-cell"><img src="https://flagcdn.com/w20/pa.png">Panamá</td>
+                <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="pts">0</td>
               </tr>
-
             </tbody>
-
           </table>
-
         </div>
 
       </div>
 
     </section>
-<!--
-    <section class="stats-row">
+
+    <!-- HISTORIAL -->
+    <section class="section" id="historial">
 
       <div class="section-top">
-
         <div>
-          <span class="section-label">
-            Estadísticas rápidas
-          </span>
-          <h2>DATOS DESTACADOS</h2>
+          <span class="section-label">HISTORIA</span>
+          <h2>TABLA DE CAMPEONES</h2>
+          <p class="section-description">Todos los ganadores de la Copa del Mundo desde 1930</p>
         </div>
-
       </div>
 
+      <div class="table-card history-table-card">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Año</th>
+              <th>Sede</th>
+              <th>Campeón</th>
+              <th>Finalista</th>
+              <th>Resultado</th>
+            </tr>
+          </thead>
+          <tbody>
 
-    <div class="stats-row">
-      <div class="stat-box">
-        <span>Máximo campeón</span>
-        <strong>Brasil</strong>
-        <small>5 títulos (1958 · 1962 · 1970 · 1994 · 2002)</small>
-      </div>
+            <tr>
+              <td class="td-year">1930</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/uy.png">Uruguay</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/uy.png">Uruguay</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/ar.png">Argentina</div></td>
+              <td class="score-cell">4–2</td>
+            </tr>
 
-      <div class="stat-box">
-        <span>Más goles</span>
-        <strong>Miroslav Klose</strong>
-        <small>16 goles</small>
-      </div>
+            <tr>
+              <td class="td-year">1934</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/it.png">Italia</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/it.png">Italia</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/cz.png">Checoslovaquia</div></td>
+              <td class="score-cell">2–1 <sup>pról.</sup></td>
+            </tr>
 
-      <div class="stat-box">
-        <span>Más finales</span>
-        <strong>Alemania</strong>
-        <small>8 finales</small>
-      </div>
+            <tr>
+              <td class="td-year">1938</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/fr.png">Francia</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/it.png">Italia</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/hu.png">Hungría</div></td>
+              <td class="score-cell">4–2</td>
+            </tr>
 
-      <div class="stat-box">
-        <span>Último campeón</span>
-        <strong>Argentina</strong>
-        <small>Catar 2022</small>
+            <tr class="history-break">
+              <td colspan="5">⏸ Pausa — Segunda Guerra Mundial (no se celebró en 1942 ni 1946)</td>
+            </tr>
+
+            <tr>
+              <td class="td-year">1950</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/br.png">Brasil</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/uy.png">Uruguay</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/br.png">Brasil</div></td>
+              <td class="score-cell"><sup>ronda final</sup></td>
+            </tr>
+
+            <tr>
+              <td class="td-year">1954</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/ch.png">Suiza</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/de.png">Alemania Occ.</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/hu.png">Hungría</div></td>
+              <td class="score-cell">3–2</td>
+            </tr>
+
+            <tr>
+              <td class="td-year">1958</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/se.png">Suecia</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/br.png">Brasil</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/se.png">Suecia</div></td>
+              <td class="score-cell">5–2</td>
+            </tr>
+
+            <tr>
+              <td class="td-year">1962</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/cl.png">Chile</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/br.png">Brasil</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/cz.png">Checoslovaquia</div></td>
+              <td class="score-cell">3–1</td>
+            </tr>
+
+            <tr>
+              <td class="td-year">1966</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/gb-eng.png">Inglaterra</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/gb-eng.png">Inglaterra</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/de.png">Alemania Occ.</div></td>
+              <td class="score-cell">4–2 <sup>pról.</sup></td>
+            </tr>
+
+            <tr>
+              <td class="td-year">1970</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/mx.png">México</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/br.png">Brasil</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/it.png">Italia</div></td>
+              <td class="score-cell">4–1</td>
+            </tr>
+
+            <tr>
+              <td class="td-year">1974</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/de.png">Alemania Occ.</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/de.png">Alemania Occ.</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/nl.png">Países Bajos</div></td>
+              <td class="score-cell">2–1</td>
+            </tr>
+
+            <tr>
+              <td class="td-year">1978</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/ar.png">Argentina</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/ar.png">Argentina</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/nl.png">Países Bajos</div></td>
+              <td class="score-cell">3–1 <sup>pról.</sup></td>
+            </tr>
+
+            <tr>
+              <td class="td-year">1982</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/es.png">España</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/it.png">Italia</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/de.png">Alemania Occ.</div></td>
+              <td class="score-cell">3–1</td>
+            </tr>
+
+            <tr>
+              <td class="td-year">1986</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/mx.png">México</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/ar.png">Argentina</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/de.png">Alemania Occ.</div></td>
+              <td class="score-cell">3–2</td>
+            </tr>
+
+            <tr>
+              <td class="td-year">1990</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/it.png">Italia</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/de.png">Alemania Occ.</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/ar.png">Argentina</div></td>
+              <td class="score-cell">1–0</td>
+            </tr>
+
+            <tr>
+              <td class="td-year">1994</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/us.png">EE. UU.</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/br.png">Brasil</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/it.png">Italia</div></td>
+              <td class="score-cell">0–0 <sup>pen.</sup></td>
+            </tr>
+
+            <tr>
+              <td class="td-year">1998</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/fr.png">Francia</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/fr.png">Francia</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/br.png">Brasil</div></td>
+              <td class="score-cell">3–0</td>
+            </tr>
+
+            <tr>
+              <td class="td-year">2002</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/kr.png">Corea / Japón</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/br.png">Brasil</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/de.png">Alemania</div></td>
+              <td class="score-cell">2–0</td>
+            </tr>
+
+            <tr>
+              <td class="td-year">2006</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/de.png">Alemania</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/it.png">Italia</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/fr.png">Francia</div></td>
+              <td class="score-cell">1–1 <sup>pen.</sup></td>
+            </tr>
+
+            <tr>
+              <td class="td-year">2010</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/za.png">Sudáfrica</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/es.png">España</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/nl.png">Países Bajos</div></td>
+              <td class="score-cell">1–0 <sup>pról.</sup></td>
+            </tr>
+
+            <tr>
+              <td class="td-year">2014</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/br.png">Brasil</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/de.png">Alemania</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/ar.png">Argentina</div></td>
+              <td class="score-cell">1–0 <sup>pról.</sup></td>
+            </tr>
+
+            <tr>
+              <td class="td-year">2018</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/ru.png">Rusia</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/fr.png">Francia</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/hr.png">Croacia</div></td>
+              <td class="score-cell">4–2</td>
+            </tr>
+
+            <tr>
+              <td class="td-year">2022</td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/qa.png">Catar</div></td>
+              <td class="winner-cell"><div class="country-cell"><img src="https://flagcdn.com/w20/ar.png">Argentina</div></td>
+              <td><div class="country-cell"><img src="https://flagcdn.com/w20/fr.png">Francia</div></td>
+              <td class="score-cell">3(4)–3(2) <sup>pen.</sup></td>
+            </tr>
+
+            <tr class="next-worldcup">
+              <td class="td-year next-year">2026</td>
+              <td>
+                <div class="country-cell multi-host">
+                  <img src="https://flagcdn.com/w20/us.png">
+                  <img src="https://flagcdn.com/w20/ca.png">
+                  <img src="https://flagcdn.com/w20/mx.png">
+                  EE.UU / CA / MX
+                </div>
+              </td>
+              <td colspan="2" class="tbd-cell">Por definir</td>
+              <td class="tbd-cell">—</td>
+            </tr>
+
+          </tbody>
+        </table>
       </div>
-    </div>
     </section>
--->
-    
-<!-- HISTORIAL -->
-<section class="section" id="historial">
 
-  <div class="section-top">
-
-    <div>
-      <span class="section-label">
-        HISTORIA
-      </span>
-
-      <h2>TABLA DE CAMPEONES</h2>
-
-      <p class="section-description">
-        Todos los ganadores de la Copa del Mundo desde 1930
-      </p>
-    </div>
-
-  </div>
-
-  <div class="table-card history-table-card">
-
-    <table class="history-table">
-
-      <thead>
-        <tr>
-          <th>Año</th>
-          <th>Sede</th>
-          <th>Campeón</th>
-          <th>Finalista</th>
-          <th>Resultado</th>
-        </tr>
-      </thead>
-
-      <tbody>
-
-  <tr>
-    <td class="td-year">1930</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/uy.png">
-        Uruguay
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/uy.png">
-        Uruguay
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/ar.png">
-        Argentina
-      </div>
-    </td>
-
-    <td class="score-cell">4–2</td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1934</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/it.png">
-        Italia
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/it.png">
-        Italia
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/cz.png">
-        Checoslovaquia
-      </div>
-    </td>
-
-    <td class="score-cell">2–1 <sup>pról.</sup></td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1938</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/fr.png">
-        Francia
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/it.png">
-        Italia
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/hu.png">
-        Hungría
-      </div>
-    </td>
-
-    <td class="score-cell">4–2</td>
-  </tr>
-
-  <tr class="history-break">
-    <td colspan="5">
-      ⏸ Pausa — Segunda Guerra Mundial (no se celebró en 1942 ni 1946)
-    </td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1950</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/br.png">
-        Brasil
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/uy.png">
-        Uruguay
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/br.png">
-        Brasil
-      </div>
-    </td>
-
-    <td class="score-cell">
-      <sup>ronda final</sup>
-    </td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1954</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/ch.png">
-        Suiza
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/de.png">
-        Alemania Occ.
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/hu.png">
-        Hungría
-      </div>
-    </td>
-
-    <td class="score-cell">3–2</td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1958</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/se.png">
-        Suecia
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/br.png">
-        Brasil
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/se.png">
-        Suecia
-      </div>
-    </td>
-
-    <td class="score-cell">5–2</td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1962</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/cl.png">
-        Chile
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/br.png">
-        Brasil
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/cz.png">
-        Checoslovaquia
-      </div>
-    </td>
-
-    <td class="score-cell">3–1</td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1966</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/gb-eng.png">
-        Inglaterra
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/gb-eng.png">
-        Inglaterra
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/de.png">
-        Alemania Occ.
-      </div>
-    </td>
-
-    <td class="score-cell">4–2 <sup>pról.</sup></td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1970</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/mx.png">
-        México
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/br.png">
-        Brasil
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/it.png">
-        Italia
-      </div>
-    </td>
-
-    <td class="score-cell">4–1</td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1974</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/de.png">
-        Alemania Occ.
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/de.png">
-        Alemania Occ.
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/nl.png">
-        Países Bajos
-      </div>
-    </td>
-
-    <td class="score-cell">2–1</td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1978</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/ar.png">
-        Argentina
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/ar.png">
-        Argentina
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/nl.png">
-        Países Bajos
-      </div>
-    </td>
-
-    <td class="score-cell">3–1 <sup>pról.</sup></td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1982</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/es.png">
-        España
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/it.png">
-        Italia
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/de.png">
-        Alemania Occ.
-      </div>
-    </td>
-
-    <td class="score-cell">3–1</td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1986</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/mx.png">
-        México
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/ar.png">
-        Argentina
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/de.png">
-        Alemania Occ.
-      </div>
-    </td>
-
-    <td class="score-cell">3–2</td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1990</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/it.png">
-        Italia
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/de.png">
-        Alemania Occ.
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/ar.png">
-        Argentina
-      </div>
-    </td>
-
-    <td class="score-cell">1–0</td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1994</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/us.png">
-        EE. UU.
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/br.png">
-        Brasil
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/it.png">
-        Italia
-      </div>
-    </td>
-
-    <td class="score-cell">0–0 <sup>pen.</sup></td>
-  </tr>
-
-  <tr>
-    <td class="td-year">1998</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/fr.png">
-        Francia
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/fr.png">
-        Francia
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/br.png">
-        Brasil
-      </div>
-    </td>
-
-    <td class="score-cell">3–0</td>
-  </tr>
-
-  <tr>
-    <td class="td-year">2002</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/kr.png">
-        Corea / Japón
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/br.png">
-        Brasil
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/de.png">
-        Alemania
-      </div>
-    </td>
-
-    <td class="score-cell">2–0</td>
-  </tr>
-
-  <tr>
-    <td class="td-year">2006</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/de.png">
-        Alemania
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/it.png">
-        Italia
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/fr.png">
-        Francia
-      </div>
-    </td>
-
-    <td class="score-cell">1–1 <sup>pen.</sup></td>
-  </tr>
-
-  <tr>
-    <td class="td-year">2010</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/za.png">
-        Sudáfrica
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/es.png">
-        España
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/nl.png">
-        Países Bajos
-      </div>
-    </td>
-
-    <td class="score-cell">1–0 <sup>pról.</sup></td>
-  </tr>
-
-  <tr>
-    <td class="td-year">2014</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/br.png">
-        Brasil
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/de.png">
-        Alemania
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/ar.png">
-        Argentina
-      </div>
-    </td>
-
-    <td class="score-cell">1–0 <sup>pról.</sup></td>
-  </tr>
-
-  <tr>
-    <td class="td-year">2018</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/ru.png">
-        Rusia
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/fr.png">
-        Francia
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/hr.png">
-        Croacia
-      </div>
-    </td>
-
-    <td class="score-cell">4–2</td>
-  </tr>
-
-  <tr>
-    <td class="td-year">2022</td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/qa.png">
-        Catar
-      </div>
-    </td>
-
-    <td class="winner-cell">
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/ar.png">
-        Argentina
-      </div>
-    </td>
-
-    <td>
-      <div class="country-cell">
-        <img src="https://flagcdn.com/w20/fr.png">
-        Francia
-      </div>
-    </td>
-
-    <td class="score-cell">3(4)–3(2) <sup>pen.</sup></td>
-  </tr>
-
-  <tr class="next-worldcup">
-
-    <td class="td-year next-year">
-      2026
-    </td>
-
-    <td>
-      <div class="country-cell multi-host">
-
-        <img src="https://flagcdn.com/w20/us.png">
-        <img src="https://flagcdn.com/w20/ca.png">
-        <img src="https://flagcdn.com/w20/mx.png">
-
-        EE.UU / CA / MX
-
-      </div>
-    </td>
-
-    <td colspan="2" class="tbd-cell">
-      Por definir
-    </td>
-
-    <td class="tbd-cell">
-      —
-    </td>
-
-  </tr>
-
-</tbody>
-
-    </table>
-
-  </div>
-
-</section>
+    <!-- SECCIÓN FORMULARIO SUSCRIPCIÓN -->
+    <section class="section" id="suscripcion">
+      <div class="section-top">
+        <div>
+          <span class="section-label">ÚNETE A LA COMUNIDAD</span>
+          <h2>SUSCRÍBETE AL BOLETÍN</h2>
+        </div>
+      </div>
+      
+      <div class="form-container">
+        <form id="subscribeForm" novalidate>
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+            <span class="error-msg" id="err-nombre">El nombre no puede estar vacío.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+            <span class="error-msg" id="err-email">Ingresa un formato de correo válido.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" min="18" placeholder="Debes tener al menos 18 años">
+            <span class="error-msg" id="err-edad">Debes tener al menos 18 años de edad.</span>
+          </div>
+
+          <div class="form-group form-checkbox">
+            <input type="checkbox" id="terminos" name="terminos">
+            <label for="terminos">Acepto los términos y condiciones de uso</label>
+          </div>
+
+          <button type="submit" id="submitBtn" class="submit-btn" disabled>Suscribirse al boletín</button>
+        </form>
+      </div>
+    </section>
 
   </main>
 
+  <!-- Vinculación del Script -->
+  <script src="app.js"></script>
 </body>
 
 </html>
