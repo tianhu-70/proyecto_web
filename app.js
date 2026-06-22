@@ -1,10 +1,5 @@
-/**
- * app.js
- * Lógica modular para el portal Todo Mundiales.
- */
-
 const FifaApp = (() => {
-  // Caché de elementos del DOM para evitar buscarlos múltiples veces
+  // Caché de elementos del DOM
   const DOM = {
     greetingElement: document.getElementById('greetingMessage'),
     themeToggleBtn: document.getElementById('themeToggle'),

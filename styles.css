@@ -1,7 +1,3 @@
-/* ========================= */
-/* styles.css */
-/* ========================= */
-
 /* 1. Variables Globales y Modo Oscuro */
 :root {
   --bg-body: #e6eaef;
@@ -107,7 +103,7 @@ body {
 .multi-host { gap: 5px; }
 .history-table-card { overflow-x: auto; }
 
-/* ESTILOS DEL NUEVO FORMULARIO */
+/* FORMULARIO */
 .form-container { background: var(--card-bg); padding: 25px; border: 1px solid var(--border-color); border-radius: 5px; }
 .form-group { margin-bottom: 18px; position: relative; }
 .form-group label { display: block; margin-bottom: 6px; font-weight: bold; font-size: 13px; color: var(--text-main); }
